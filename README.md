@@ -44,9 +44,6 @@ Para visualizar y probar los endpoints de la API, acceder a la siguiente URL: ht
    En el archivo `src/main/resources/application.properties`, configura los valores necesarios:
 
     ```properties
-    # JWT Secret Key
-    jwt.token.secret=MI_CLAVE_SECRETA_EN_BASE64
-
     # Validación de usuario
     validation.email.regex=^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z]{2,6}$
     validation.email.message=Correo no válido
@@ -66,8 +63,17 @@ Para visualizar y probar los endpoints de la API, acceder a la siguiente URL: ht
     spring.jpa.hibernate.ddl-auto=create-drop
     logging.level.org.hibernate.SQL=debug
     ```
+3. Acceso a la Consola de H2:
 
-3. Compilar el proyecto:
+   La consola de H2 se encuentra habilitada y está disponible en http://localhost:8080/h2-console.
+
+4. Credenciales de Acceso a H2:
+
+   - **URL:** jdbc:h2:mem:cpimgroupdb
+   - **USUARIO:** root
+   - **CONTRASEÑA:** root
+
+5. Compilar el proyecto:
     ```bash
     mvn clean install
     ```
